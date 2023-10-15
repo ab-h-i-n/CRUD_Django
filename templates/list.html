@@ -1,0 +1,17 @@
+{% include "links.html" %}
+
+<h1>List</h1>
+
+{% for m in movie %}
+<hr />
+<br />
+<h1>{{m.name | upper}}</h1>
+<br />
+<h2>{{m.year}}</h2>
+<br />
+<h3>{{m.desc}}</h3>
+<br />
+<i><a href="{% url "edit" m.id %}">edit</a> | <a href="{% url "delete" m.id %}">delete</a></i>
+<hr />
+<br />
+{% endfor %}

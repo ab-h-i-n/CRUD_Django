@@ -1,0 +1,10 @@
+{% include "links.html" %}
+
+<h1>Create</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{frm.as_div}}
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
